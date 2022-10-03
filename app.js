@@ -3,6 +3,7 @@ import cors from 'cors'
 import { config } from 'dotenv';
 import auth from './routes/jwtauth.js'
 import dashboard from './routes/dashboard.js'
+import mongo from './models/db.js'
 import managelinks from './routes/managelinks.js'
 import home from './routes/home.js'
 
