@@ -49,5 +49,12 @@ router.post('/removelink', auth ,async(req,resp)=>{
     }
 })
 
-
+router.get('/getall/:username',async (req,resp)=>{
+    const user = req.params.username;
+    // resp.send(user);
+    const data = await db.findOne({
+        username:user.toLowerCase()
+    })
+    resp.send(data);
+})
 export default router;
