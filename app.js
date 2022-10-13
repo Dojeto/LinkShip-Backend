@@ -6,7 +6,7 @@ import dashboard from './routes/dashboard.js'
 import mongo from './models/db.js'
 import managelinks from './routes/managelinks.js'
 import home from './routes/home.js'
-import corsOptions from "./config/corsOption.js";
+import corsOptions from "./config/corsOptions.js";
 
 const port = process.env.PORT || 3000;
 
