@@ -6,6 +6,7 @@ import dashboard from './routes/dashboard.js'
 import mongo from './models/db.js'
 import managelinks from './routes/managelinks.js'
 import home from './routes/home.js'
+import corsOptions from "./config/corsOption.js";
 
 const port = process.env.PORT || 3000;
 
@@ -13,7 +14,7 @@ const app = express();
 config();
 
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 
 //Routes
 app.use('/',home)
