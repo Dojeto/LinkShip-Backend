@@ -2,6 +2,7 @@ import { Router } from "express"
 import bcrypt from 'bcrypt'
 import db from '../models/schema.js'
 import jwtClient from "../utils/jwtGenrator.js";
+import auth from "../middleware/authorization.js";
 
 const router = Router();
 
@@ -58,6 +59,15 @@ router.post('/login',async(req,resp)=>{
     } catch (err) {
         console.log(err.message)
         resp.status(500).json("Server Error")
+    }
+})
+
+router.get('/is-verify',auth ,async(req,resp)=>{
+    try {
+        resp.status(200).json(true);
+    } catch (error) {
+        console.log(error.message);
+        resp.status(500).send("server Error") ;
     }
 })
 
