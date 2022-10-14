@@ -9,7 +9,7 @@ const router = Router();
 router.post('/register', async(req,resp)=>{
     try {
 
-        const { username , password } = req.body;
+        const { firstname , lastname ,username , password } = req.body;
         const finduser = await db.find({
             username : username.toLowerCase(),
         })
@@ -23,6 +23,8 @@ router.post('/register', async(req,resp)=>{
         const bcryptPassword = await bcrypt.hash(password,salt);
     
         const newUser = await db.create({
+            firstname : firstname,
+            lastname : lastname,
             username : username.toLowerCase(),
             password : bcryptPassword
         })
