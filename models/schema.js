@@ -17,6 +17,12 @@ const UserSchema = new mongoose.Schema({
         type : String,
         required : true
     },
+    imgurl :{
+        type : String
+    },
+    userbio :{
+        type : String
+    },
     userinput : 
     {   
         appname:[{
