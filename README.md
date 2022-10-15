@@ -2,7 +2,7 @@
 
 A simple backend api for Link Ship which allowe to create user thier account and manage thier social links
 
-[![API Documentation - Read here](https://img.shields.io/static/v1?label=API+Documentation&message=Read+here&color=2ea44f&style=for-the-badge&logo=postman&logoColor=orange)](https://github.com/Dojeto/Register-And-Login-Backend)
+[![API Documentation - Read here](https://img.shields.io/static/v1?label=API+Documentation&message=Read+here&color=2ea44f&style=for-the-badge&logo=postman&logoColor=orange)](https://documenter.getpostman.com/view/23795265/2s847BSF8T)
 
 ## Technologies Used
 1. Nodejs
