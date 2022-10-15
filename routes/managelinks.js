@@ -61,6 +61,10 @@ router.get("/getall/:username", async (req, resp) => {
   const data = await db.findOne({
     username: user.toLowerCase(),
   });
+  if(data === null)
+  {
+    return resp.status(401).json(false);
+  }
   resp.send(data);
 });
 
